@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  text-decoration: none;
+
+  --backgroundColor: rgb(32, 26, 42);
+}
+
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(57, 32, 80);
+  border-radius: 5px;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: blueviolet;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track:hover {
+  background-color: rgb(78, 44, 109);
+}
+
+body {
+  background-color: var(--backgroundColor);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 5%;
+
+  height: 65px;
+  width: 100vw;
+
+  background-color: white;
+
+  border-radius: 0px 0px 20px 20px;
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+.logo {
+  width: 150px;
+  margin-top: 15px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: calc(100vh - 65px);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: 400px;
+  height: 200px;
+
+  background-color: white;
+
+  border-radius: 15px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 15px;
+  color: white;
+}
+
+p {
+  text-align: center;
+
+  margin: 10px 0px;
+
+  color: white;
+}
+
+input {
+  border-radius: 8px;
+  border: 2px solid rgba(0, 0, 255, 0.47);
+
+  width: 50px;
+  height: 20px;
+  padding: 10px;
+
+  text-align: center;
+
+  background-color: rgba(0, 0, 0, 0.037);
+}
+
+.main .container input::-webkit-outer-spin-button,
+.main .container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btnClicavel {
+  margin-top: 10px;
+  width: 70px;
+  height: 30px;
+
+  border: 2px solid rgba(0, 0, 255, 0.47);
+  border-radius: 8px;
+}
+
+/* Muda cor */
+
+.changeTheme {
+  background-color: var(--backgroundColor-BlackTheme);
+}
+
+.mudaHeader {
+  background-color: rgb(55, 55, 55);
+  color: yellow;
+}
+
+/* TodoList */
+
+.containerToDo {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 20px;
+
+  width: 300px;
+  height: 450px;
+
+  background-color: rgb(42, 26, 64);
+
+  border-radius: 15px;
+}
+
+.containerTarefa {
+  background-color: rgb(42, 29, 54);
+
+  text-align: center;
+  -ms-text-size-adjust: auto;
+
+  width: 250px;
+  min-height: 100px;
+  
+  border-radius: 10px;
+  
+  border: 2px solid rgb(119, 0, 255);
+}
+
+#containerTarefa h3 {
+  margin-top: 5px;
+  
+  color: white;
+}
+
+#containerTarefa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  overflow: auto;
+
+  padding-right: 5px;
+  margin-left: 5px;
+}
+
+.containerToDo button {
+  border: 2px solid rgb(119, 0, 255);
+
+  padding: 2apx;
+
+  outline: none;
+
+  background-color: rgb(38, 26, 49);
+
+  border-radius: 5px;
+
+  color: white;
+}
+
+.containerToDo button:hover {
+  background-color: rgb(95, 63, 124);
+}
+
+#backgroundModal {
+  position: absolute;
+  top: -1000px;
+  transition: 0.6s;
+}
+
+.mostraModal{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.39);
+  width: 100%;
+  height: 100vh;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: 0.6s;
+  top: 0px !important;
+}
+
+.containerModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+}
+#modal {
+  position: relative;
+  width: 400px;
+  height: 150px;
+  border: 2px solid rgb(119, 0, 255);
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#modal input {
+  color: white;
+  height: 35px;
+  margin: 5px 0 5px 0;
+}
+#modal input:nth-child(1) {
+  width: 75%;
+}
+#modal input:nth-child(2) {
+  width: 50%;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="//use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Ex001</title>
+  </head>
+  <body>
+    <div id="backgroundModal">
+      <div class="containerModal">
+        <div id="modal">
+          <input id="descricao" type="text" />
+          <input type="date" />
+          <button onclick="submit()">Submit</button>
+        </div>
+      </div>
+    </div>
+    <header id="header">
+      <a href="index.html"
+        ><img class="logo" src="img/LOGO SISTEMA ONLINE 300.png" alt="logoBDS"
+      /></a>
+      <nav>
+        <a id="mudacor" class="fas fa-paint-brush" onclick="changeTheme()"></a>
+        <a class="fas fa-list" href="todoList.html"></a>
+      </nav>
+    </header>
+    <section class="main">
+      <h1>To do List</h1>
+      <p>Estou apredendo desenvolvimento web!</p>
+      <div class="containerToDo">
+        <div id="containerTarefa"></div>
+        <button onclick="mostraModal()">Cria tarefa</button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
