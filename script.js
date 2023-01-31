@@ -40,8 +40,14 @@ function mostraModal() {
 
 function submit() {
   modal.classList.remove("mostraModal");
-  criaTarefa();
-  descricao.value = "";
+  if (descricao.value == "") {
+    alert("Por favor insira uma descrição para a tarefa!");
+  } else if (date.value == "") {
+    alert("Por favor insira a data da tarefa!");
+  } else {
+    criaTarefa();
+    descricao.value = "";
+  }
 }
 
 function criaTarefa() {
@@ -49,6 +55,7 @@ function criaTarefa() {
   let tarefa = {
     id: "",
     descricao: descricao.value,
+    date: date.value,
   };
 
   tar.push(tarefa);
@@ -59,8 +66,12 @@ function criaTarefa() {
 }
 
 function criaTagLi(tarefa) {
-  let liTarefa = document.createElement("ul");
-  liTarefa.innerHTML = `${tarefa.descricao}`;
-  liTarefa.classList.add("containerTarefa");
-  containerTarefa.appendChild(liTarefa);
+  let ulTarefa = document.createElement("ul");
+  ulTarefa.classList.add("containerTarefa");
+  containerTarefa.appendChild(ulTarefa);
+  
+  let liTarefa = document.createElement('li');
+  liTarefa.classList.add("ultarefa");
+  ulTarefa.appendChild(liTarefa)
+  liTarefa.innerHTML = `<h1>${tarefa.descricao}</h1><p>${tarefa.date}</p>`;
 }
